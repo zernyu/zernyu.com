@@ -6,6 +6,7 @@ Portfolio site source code
 Technologies Used
 -----------------
 
+### Site
 - jQuery
 - jQuery UI
 - jQuery History
@@ -13,6 +14,7 @@ Technologies Used
 - masonry
 - requirejs
 
+### Build
 - Grunt
 - jshint
 - r.js
