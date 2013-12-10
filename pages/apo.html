@@ -1,0 +1,135 @@
+<article>
+    <header>
+        <h1>Alpha Phi Omega</h1>
+
+        <h2>2009</h2>
+
+        <p>Ruby on Rails, JavaScript, HTML, CSS</p>
+    </header>
+
+    <section>
+        <header>
+            <img src="/pages/apo/home.png" alt="Alpha Phi Omega"/>
+        </header>
+
+        <p>
+            <span class="intro">Alpha Phi Omega</span> is a national service fraternity for college students. It
+            revolves around doing community service projects, with service requirements for all members and pledges to
+            stay active each semester. Service projects span a whole variety of scale and involvement, with projects to
+            serve the school Campus, the local Community, the Alpha Phi Omega Chapter, or the Country. Because there is
+            such a wealth of available service projects, scheduling these projects with a chapter of 100 students can
+            become pretty demanding. Before I joined, the local chapter had been scheduling events with a giant binder.
+            Members had to find the binder to see what events were available and to sign up for them. Communication and
+            management was a challenge, to say the least.
+        </p>
+
+        <p>
+            When I pledged at Alpha Phi Omega, my friend
+            <a href="http://will-meister.com/" title="Will Meister" target="_blank">Will</a>
+            had just thrown together a quick site on Ruby on Rails to handle simple event scheduling and member profiles
+            with contact info. The site was slow, but functional, and completely spoiled me for never having to deal
+            with the giant binder! When I became the chapter's website administrator and Will moved on to become the
+            chapter president, he handed me the codebase and that was when I dove headfirst into the world of software
+            engineering.
+        </p>
+
+        <p>
+            I had never heard of a software design pattern before, much less know what MVC was. The extent of my web
+            programming knowledge consisted of a few PHP scripts and simple SQL queries and the occasional AJAX call.
+            Will, being the really busy guy he is, and having an insanely short deadline to get a functioning site put
+            out, was just as lost as I was, it turns out. Following tradition of how the site was conceived, it
+            continued to be a work-in-progress sandbox for testing out (bad) ideas and learning from mistakes the hard
+            way (working directly off production ;)).
+        </p>
+
+        <p>
+            By the time I graduated and relinquished my baby, the chapter was able to swell to almost three times (past
+            <a href="http://en.wikipedia.org/wiki/Dunbar's_number" title="Dunbar's number" target="_blank">Dunbar's
+                number</a>!) the amount of members it used to be able to manage due to the reduced overhead of having
+            many of the chapter's chores automated.
+        </p>
+    </section>
+
+    <section>
+        <header>
+            <h3>Events</h3>
+        </header>
+
+        <div class="carousel-container">
+            <div class="carousel" data-width="768" data-height="537">
+                <img src="/pages/apo/eventview.png" alt="View Event"/>
+                <img src="/pages/apo/eventcreate.png" alt="Create Event"/>
+                <img src="/pages/apo/eventspast.png" alt="Past Events"/>
+                <img src="/pages/apo/events.png" alt="Current Events"/>
+            </div>
+        </div>
+
+        <p>
+            Being in Alpha Phi Omega meant a part of your life revolved around attending many events that would earn you
+            special points you needed to acquire to become or stay an active member that year. These requirements used
+            to be as simple as doing 20 community service hours within the semester, but once the chapter switched to
+            using a website that logged every members' activities, members of the exec board realized they could create
+            new and creative requirements for members. And creative they were!
+        </p>
+
+        <p>
+            The events aspect of the site was used for any and all events, from service projects and weekly meetings to
+            pot luck dinners and spring break Habitat for Humanity trips. It let the event managers easily coordinate
+            events because all attendees' contact info was easily available and they could quickly approve attendance
+            after the event with a few clicks. Events could have points added to them that attendees would earn for
+            going
+            to them, such as community service hours, leadership hours, and fellowship hours.
+        </p>
+
+        <p>
+            To make event managers' lives easier, I added in some automation to the event sign-up process. Attendees
+            were notified by email a few hours before the event was about to begin. There was a wait list that would
+            automatically bump members in the wait list to the attendee list if someone else dropped out and it would
+            notify the member that they've been moved off the wait list. The wait list had logic that would give members
+            with cars priority over other members if the event was short on drivers. This helped immensely in making
+            sure everyone signed up was able to get to the event.
+        </p>
+    </section>
+
+    <section>
+        <header>
+            <h3>Members</h3>
+        </header>
+
+        <div class="carousel-container">
+            <div class="carousel" data-width="768" data-height="599">
+                <img src="/pages/apo/memberview.png" alt="View Member"/>
+                <img src="/pages/apo/members.png" alt="Current Members"/>
+            </div>
+        </div>
+
+        <p>
+            The most complicated part of the site was the members portion of the site. The site kept track of every
+            event each member had ever signed up for, so that people could keep track of their requirements progress as
+            well as have their Alpha Phi Omega career total service hours to put on their resumes. Calculating each
+            member's stats was quite complex due to different member statuses having different requirements; pledges had
+            to complete different requirements compared to active members who had differing requirements from members on
+            the executive board. Members could also be penalized for not showing up to events they signed up for by
+            having their total required service hours increased for the semester.
+        </p>
+
+        <p>
+            Requirements were also changed and updated each semester as the exec committee changed members and new
+            members brought in new ideas. What started out as just requiring members to complete a certain amount of
+            community service hours and attending enough weekly meetings became requiring members to attend a more
+            diverse selection of events so that attendance was more spread out among different events. We were able to
+            require members to have to attend every type of service event - chapter, campus, community, country - as
+            well as letting members choose between being drivers or being part of one of the chapters' many various
+            committees. Exec board members were required to submit a semester's end report so that the new chair members
+            of the next semester would be able to pick up where they left off.
+        </p>
+
+        <p>
+            All of this required large amounts of calculations every time member data was retrieved for the website, so
+            I had to aggressively cache pages as well as store precalculated member values in the database for faster
+            retrieval. It was a challenge to keep values up to date while making sure as many values were cached and
+            stored as possible as to avoid unnecessary calculations. For a long time, the site was very slow to respond,
+            with pages taking over a minute to load! How embarassing :)
+        </p>
+    </section>
+</article>

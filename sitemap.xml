@@ -1,0 +1,55 @@
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemalocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>
+            http://zernyu.com
+        </loc>
+    </url>
+
+    <url>
+        <loc>
+            http://zernyu.com/projects
+        </loc>
+    </url>
+
+    <url>
+        <loc>
+            http://zernyu.com/about
+        </loc>
+    </url>
+
+    <url>
+        <loc>
+            http://zernyu.com/projects/apo
+        </loc>
+    </url>
+
+    <url>
+        <loc>
+            http://zernyu.com/projects/rab
+        </loc>
+    </url>
+
+    <url>
+        <loc>
+            http://zernyu.com/projects/musicmuse
+        </loc>
+    </url>
+
+    <url>
+        <loc>
+            http://zernyu.com/projects/grababike
+        </loc>
+    </url>
+
+    <url>
+        <loc>
+            http://zernyu.com/projects/vodori
+        </loc>
+    </url>
+
+    <url>
+        <loc>
+            http://zernyu.com/resume.pdf
+        </loc>
+    </url>
+</urlset>

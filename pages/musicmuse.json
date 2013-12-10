@@ -1,0 +1,5 @@
+{
+    "title": "Music Muse",
+    "metadata": "Music Muse was a quick experimental concept project I worked on at school to explore what an online music aggregator could be like. It scraped electronic music blogs that shared mp3 files and listed the tracks in an interface very similar to iTunes.",
+    "body": "/pages/musicmuse.html"
+}

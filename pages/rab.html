@@ -1,0 +1,128 @@
+<article>
+    <header>
+        <h1>RAB Lighting</h1>
+
+        <h2>2007</h2>
+
+        <p>JavaScript, PHP, MySQL</p>
+    </header>
+
+    <section>
+        <p>
+            Summer code slinging internship! <span class="intro">RAB Lighting</span> is a company that has any lighting
+            and fixture solution you could dream of. As their sole developer, I was tasked with rewriting their aging
+            back orders system and writing a snazzy new calculator feature on the website. I only had a little
+            experience with JavaScript and no experience with PHP or SQL at the time. I had to learn fast!
+        </p>
+    </section>
+
+    <section>
+        <header>
+            <h3>Pole Capacity Calculator</h3>
+        </header>
+
+        <div class="carousel-container">
+            <div class="carousel" data-width="528" data-height="252">
+                <img src="/pages/rab/addfix.png"/>
+                <img src="/pages/rab/poledropdown.png"/>
+                <img src="/pages/rab/calculations1.png"/>
+                <img src="/pages/rab/calculations2.png"/>
+            </div>
+        </div>
+
+        <p>
+            The Pole Capacity Calculator was a fun one to write. It was a page that let users choose a pole and average
+            wind
+            speed and they could then add different lighting fixtures to the pole and it would calculate if the pole
+            could
+            support their selections.
+        </p>
+
+        <p>
+            Its data was populated from a few SQL queries in the PHP backend. All page interactions
+            were written in vanilla JavaScript (I wasn't a fan of libraries yet because they bogged down the already
+            snail-slow
+            JavaScript engines browsers were sporting back then (at least on my Pentium III 128MB RAM work computer!)).
+            Changing
+            dropdown options changed the values the calculations were run against.
+        </p>
+
+        <p>
+            The fun part was the fixture name
+            autocompletion. Typing in a fixture's name would provide autocomplete results like you see in browsers
+            everywhere
+            now. I had just learned about trees and binary search in my data structures class the previous semester. I
+            wrote
+            a
+            Node class and a Tree class and the list of fixtures was fed in which was sorted alphabetically.
+            Autocomplete
+            was
+            then as simple as running a binary tree search after every letter typed. This ran surprisingly instant... I
+            was
+            expecting slow chugging calculations as the user types!
+        </p>
+    </section>
+
+    <section>
+        <header>
+            <h3>Back Orders System</h3>
+        </header>
+
+        <div class="carousel-container">
+            <div class="carousel" data-width="528" data-height="281">
+                <img src="/pages/rab/main.png"/>
+                <img src="/pages/rab/loading.png"/>
+                <img src="/pages/rab/modal.png"/>
+                <img src="/pages/rab/selectbox.png"/>
+            </div>
+        </div>
+
+        <p>
+            The internal back orders system was an old and slow system that took around 20 seconds to load each page. I
+            couldn't
+            believe none of the company's employees had gone crazy using it! All actions on the page required a page
+            reload,
+            so
+            it made sense to make the data dynamically loaded so we can play with it without needing to load the page
+            all
+            over
+            again.
+        </p>
+
+        <p>
+            By having the page data load through AJAX, the page would display immediately, and once the data was
+            displayed,
+            the
+            user could sort the data by column instantly.
+        </p>
+
+        <p>
+            I added a modal window to display more detailed information about each product order where before it was
+            sending
+            the
+            user to another page.
+        </p>
+
+        <p>
+            Updating the order status was quick and seamless by clicking on the status and choosing a new status. The
+            updated
+            status would be sent asynchronously in the background and the data in the frontend was updated.
+        </p>
+
+        <p>
+            I rewrote some really inefficient SQL queries (SELECT * FROM...) which reduced overhead by a lot and shaved
+            a lot of loading time off. Surprisingly, the biggest culprit for the 20 second page load time was rendering
+            the
+            table rows. The original page used Prototype.js which I found, through JS profiling, added a huge overhead
+            for
+            every
+            function call it wrapped. The other culprit was rendering one row at a time as data was iterated over.
+            Building
+            up
+            an HTML string and rendering it all at once was far faster. In the end, I was able to shave the page load
+            time
+            down
+            to around 3 seconds. It was a company hit!
+        </p>
+    </section>
+</article>
