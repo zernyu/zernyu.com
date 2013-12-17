@@ -5,9 +5,10 @@ define([
     'zernyu/Analytics',
     'zernyu/StateManager',
     'zernyu/states',
-    'jquery-history',
-    'Router'
-], function (Analytics, StateManager, states) {
+    'zernyu/preloadImages',
+        'jquery-history',
+        'Router'
+], function (Analytics, StateManager, states, preloadImages) {
     'use strict';
 
     var router = new Router();
@@ -22,6 +23,9 @@ define([
         document.title = 'zernyu chou | projects';
         $('meta[name="description"]').attr('content', 'Hello! I\'m Zernyu. Come peruse my various projects I have worked on');
         StateManager.setState(states.PROJECTS_LIST);
+
+        // Preload projects strip images
+        preloadImages.load();
     });
 
     router.route('/projects/:id', function (project) {

@@ -10,7 +10,6 @@ define([
     'zernyu/stateObjects/ProjectsStrip',
     'zernyu/stateObjects/InfoPopup',
     'zernyu/stateObjects/Slider',
-    'zernyu/preloadImages',
     'jquery-ui',
     'modernizr'
 ], function () {
