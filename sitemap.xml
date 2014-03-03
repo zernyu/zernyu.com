@@ -49,7 +49,19 @@
 
     <url>
         <loc>
+            http://zernyu.com/projects/buswatch
+        </loc>
+    </url>
+
+    <url>
+        <loc>
             http://zernyu.com/resume.pdf
+        </loc>
+    </url>
+
+    <url>
+        <loc>
+            http://zernyu.com/buswatch/pebble
         </loc>
     </url>
 </urlset>
