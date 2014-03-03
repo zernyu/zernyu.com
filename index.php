@@ -1,17 +1,17 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
 $title = 'zernyu chou';
-$meta = 'Hello! I\'m Zernyu and this is my portfolio. I am a Chicago-based full stack developer, but I have a keen appreciation for front end development and the endless possibilities of beautiful user interfaces.';
+$meta = 'Hello! I\'m Zernyu Chou and this is my portfolio. I am a Chicago-based full stack developer, but I have a keen appreciation for front end development and the endless possibilities of beautiful user interfaces.';
 $project_details = '';
 
 switch($uri) {
     case '/projects':
         $title = 'zernyu chou | projects';
-        $meta = 'Hello! I\'m Zernyu. Come peruse my various projects I have worked on';
+        $meta = 'Hello! I\'m Zernyu Chou. Come peruse my various projects I have worked on';
         break;
     case '/about':
         $title = 'zernyu chou | about';
-        $meta = 'Hello! I\'m Zernyu. Check out my resume and give me a holler.';
+        $meta = 'Hello! I\'m Zernyu Chou. Check out my resume and give me a holler.';
         break;
     case '/projects/apo':
         $title = 'zernyu chou | projects | Alpha Phi Omega';
