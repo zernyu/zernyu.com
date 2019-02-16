@@ -81,6 +81,16 @@ module.exports = function (grunt) {
             },
             all: ['js/app.js', 'js/zernyu/**/*.js']
         },
+        intern: {
+            main: {
+                options: {
+                    runType: 'runner',
+                    config: 'tests/intern',
+                    reporters: ['console', 'lcov'],
+                    suites: []
+                }
+            }
+        },
         requirejs: {
             compile: {
                 options: {
@@ -128,7 +138,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('intern');
 
     grunt.registerTask('default', ['clean']);
-    grunt.registerTask('build', ['clean', 'jshint', 'cssmin', 'htmlmin', 'requirejs']);
+    grunt.registerTask('build', ['clean', 'jshint', 'intern', 'cssmin', 'htmlmin', 'requirejs']);
+    grunt.registerTask('test', ['intern']);
 };

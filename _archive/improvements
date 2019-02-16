@@ -1,0 +1,4 @@
+- project pages loaded through mustache template
+- project page info loaded through header info with backend support
+- masonry for project description image layouts
+- X, Y, Z system instead of layers system
